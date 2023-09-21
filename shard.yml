@@ -1,0 +1,13 @@
+name: carp
+version: 0.1.0
+
+authors:
+  - Ian Rash <redcodefinal@gmail.com>
+
+targets:
+  carp:
+    main: src/carp.cr
+
+crystal: 1.9.2
+
+license: MIT
