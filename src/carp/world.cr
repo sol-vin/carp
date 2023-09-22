@@ -17,8 +17,15 @@ class Carp::World
   DEFAULT_CELL_SIZE = 4.0_f32
 
 
+  property gravity : Vector2 = DEFAULT_GRAVITY
+  getter spatial_hash : SpatialHash
 
-  def initialize(gravity = DEFAULT_GRAVITY, cell_size = DEFAULT_CELL_SIZE)
+  @bodies = [] of Body
+
+  
+
+  def initialize(@gravity = DEFAULT_GRAVITY, cell_size = DEFAULT_CELL_SIZE)
+    spatial_hash = SpatialHash.new(cell_size)
   end
 
   def clear
@@ -37,5 +44,8 @@ class Carp::World
   end
 
   def <<(body : Body)
+  end
+
+  def [](index : Int32)
   end
 end

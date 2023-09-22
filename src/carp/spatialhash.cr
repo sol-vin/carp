@@ -6,10 +6,9 @@ class Carp::SpatialHash
   # getter query_result : Array(Int32)
   getter entries : Hash(Key, Array(Int32))
 
-  def initialize(cell_size)
-    raise "Invalid cell_size #{cell_size}" if cell_size < 0
-    @cell_size = cell_size
-    @inverse_cell_size = 1.0_f32 / cell_size
+  def initialize(@cell_size)
+    raise "Invalid cell_size #{@cell_size}" if @cell_size < 0
+    @inverse_cell_size = 1.0_f32 / @cell_size
   end
 
   def clear
