@@ -5,22 +5,22 @@ module Carp
     alias Color = Raylib::Color
   {% else %}
     struct Vector2
-      x : LibC::Float
-      y : LibC::Float
+      x : Float32
+      y : Float32
     end
 
     struct AABB
-      x : LibC::Float
-      y : LibC::Float
-      width : LibC::Float
-      height : LibC::Float
+      x : Float32
+      y : Float32
+      width : Float32
+      height : Float32
     end
 
     struct Color
-      r : LibC::UChar
-      g : LibC::UChar
-      b : LibC::UChar
-      a : LibC::UChar
+      r : UInt8
+      g : UInt8
+      b : UInt8
+      a : UInt8
     end
   {% end %}
 end
